@@ -1,13 +1,19 @@
 services:
   - type: web
-    name: bitcode-api
+    name: Bitcode_Test_APIs
     runtime: node
+    repo: https://github.com/deepakkaligotla/Bitcode_Test_APIs
+    branch: main
+    plan: free
     buildCommand: npm install
-    startCommand: node index.js
+    startCommand: node server.js
     envVars:
       - key: NODE_ENV
         value: production
+      - key: PORT
+        value: 10000
       - key: JWT_SECRET
         value: your_jwt_secret
       - key: MONGO_URI
         value: mongodb+srv://deepakkaligotla:XfRcLu53HRWvMR6W@cluster.mongodb.net/BitCode-APIs?retryWrites=true&w=majority
+    autoDeploy: true
