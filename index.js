@@ -8,7 +8,6 @@ const path = require('path')
 const app = express();
 
 const twilio = require('./routes/twilio_api')
-const signup = require('./routes/signup')
 const signupApi = require('./routes/signup_api')
 
 app.use(bodyParser.urlencoded({ extended: true }));
